@@ -1,0 +1,18 @@
+******************************************************************************** 
+Connecting: host1 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: host1 : usr1 : pwd1 
+******************************************************************************** 
+Connecting: host2 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: host2 : usr2 : pwd2 
+******************************************************************************** 
+Connecting: host3 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: host3 : usr3 : pwd3 
+******************************************************************************** 
+Connecting: 127.0.0.1 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: 127.0.0.1 : usr4 : pwd4 
+******************************************************************************** 
+Connecting: host5 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: host5 : usr5 : pwd5 
+******************************************************************************** 
+Connecting: host6 
+*** ERROR: Node down or incorrect credentials provided. Failed to connect: host6 : usr6 : pwd6 

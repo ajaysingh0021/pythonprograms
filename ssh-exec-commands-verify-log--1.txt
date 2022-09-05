@@ -1,0 +1,120 @@
+******************************************************************************** 
+Connecting: host1 
+Connected: host1 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DISKSPACE_AVAILABLE::/dev/mapper/ubuntu--vg-ubuntu--lv 
+Executing command: df -h | grep /dev/mapper/ubuntu--vg-ubuntu--lv 
+stdout = '/dev/mapper/ubuntu--vg-ubuntu--lv  827G  650G  144G  82% /' 
+usedSpacePercentage = 82% 
+Current used space = '82' on host 'host1' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: FREE_MEMORY 
+Executing command: free -m | grep Mem: 
+stdout = 'Mem:          96679       30110         660           1       65908       65656' 
+availableMemory = 65656 
+Current available Memory = '65656' on host 'host1' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: host1 [1.2.3.4] 
+******************************************************************************** 
+Connecting: host2 
+Connected: host2 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DISKSPACE_AVAILABLE::/dev/sda1 
+Executing command: df -h | grep /dev/sda1 
+stdout = '/dev/sda1       984G  635G  299G  68% /' 
+usedSpacePercentage = 68% 
+Current used space = '68' on host 'host2' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: FREE_MEMORY 
+Executing command: free -m | grep Mem: 
+stdout = 'Mem:          96576       75711       12004           9        8860       19934' 
+availableMemory = 19934 
+Current available Memory = '19934' on host 'host2' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: host2 [2.3.4.5] 
+******************************************************************************** 
+Connecting: host3 
+Connected: host3 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/opt/xyz 
+Executing command: ls /opt/xyz 
+stdout = 'bin
+etc
+lib
+pkg
+README
+setenv
+As expected, found directory '/opt/xyz' on host 'host3' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: host3 [3.4.5.6] 
+******************************************************************************** 
+Connecting: 127.0.0.1 
+Connected: 127.0.0.1 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/opt/xyz 
+Executing command: ls /opt/xyz 
+stdout = 'bin
+etc
+pkg
+README
+setenv' 
+As expected, found directory '/opt/xyz' on host '127.0.0.1' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: 127.0.0.1 [host4] 
+******************************************************************************** 
+Connecting: host5 
+Connected: host5 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::10.10.1.21 
+Executing command: ping -c 2 10.10.1.21 
+stdout = 'PING 10.10.1.21 (10.10.1.21) 56(84) bytes of data.
+64 bytes from 10.10.1.21: icmp_seq=1 ttl=63 time=0.422 ms
+64 bytes from 10.10.1.21: icmp_seq=2 ttl=63 time=0.385 ms
+
+--- 10.10.1.21 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 999ms
+rtt min/avg/max/mdev = 0.385/0.403/0.422/0.027 ms' 
+packetLossPercentage = 0 
+As expected, IP '10.10.1.21' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::10.10.1.27 
+Executing command: ping -c 2 10.10.1.27 
+stdout = 'PING 10.10.1.27 (10.10.1.27) 56(84) bytes of data.
+64 bytes from 10.10.1.27: icmp_seq=1 ttl=63 time=0.354 ms
+64 bytes from 10.10.1.27: icmp_seq=2 ttl=63 time=0.398 ms
+
+--- 10.10.1.27 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.354/0.376/0.398/0.022 ms' 
+packetLossPercentage = 0 
+As expected, IP '10.10.1.27' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::10.64.104.43 
+Executing command: ping -c 2 10.64.104.43 
+stdout = 'PING 10.64.104.43 (10.64.104.43) 56(84) bytes of data.
+64 bytes from 10.64.104.43: icmp_seq=1 ttl=59 time=0.907 ms
+64 bytes from 10.64.104.43: icmp_seq=2 ttl=59 time=2.64 ms
+
+--- 10.64.104.43 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.907/1.776/2.645/0.869 ms' 
+packetLossPercentage = 0 
+As expected, IP '10.64.104.43' is pingable.
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: host5 [-] 
+******************************************************************************** 
+Connecting: host6 
+Connected: host6 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/test/latest/abc.py 
+Executing command: ls /test/latest/abc.py 
+stdout = '/test/latest/abc.py' 
+As expected, found directory '/test/latest/abc.py' on host 'host6' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: host6 [6.5.4.3] 
+Sending final email 
+Successfully sent final email 
+****************************************************************************************** 
+ERRORS RECEIVED:: 
+None 
+****************************************************************************************** 
