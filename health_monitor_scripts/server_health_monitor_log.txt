@@ -1,0 +1,221 @@
+******************************************************************************** 
+Connecting: ajaynp-demo-lnx 
+Connected: ajaynp-demo-lnx 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DISKSPACE_AVAILABLE::/dev/mapper/ubuntu--vg-ubuntu--lv 
+Executing command: df -h | grep /dev/mapper/ubuntu--vg-ubuntu--lv 
+stdout = '/dev/mapper/ubuntu--vg-ubuntu--lv  827G  320G  474G  41% /' 
+usedSpacePercentage = 41% 
+Current used space = '41' on host 'ajaynp-demo-lnx' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: FREE_MEMORY 
+Executing command: free -m | grep Mem: 
+stdout = 'Mem:          96679       26160        4215         140       66304       69449' 
+availableMemory = 69449 
+Current available Memory = '69449' on host 'ajaynp-demo-lnx' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: ajaynp-demo-lnx [172.24.77.213] 
+******************************************************************************** 
+Connecting: ajaynp-stg-lnx 
+Connected: ajaynp-stg-lnx 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DISKSPACE_AVAILABLE::/dev/sda1 
+Executing command: df -h | grep /dev/sda1 
+stdout = '/dev/sda1       984G  825G  110G  89% /' 
+usedSpacePercentage = 89% 
+Current used space = '89' on host 'ajaynp-stg-lnx' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: FREE_MEMORY 
+Executing command: free -m | grep Mem: 
+stdout = 'Mem:          96576       21407         642         142       74526       74069' 
+availableMemory = 74069 
+Current available Memory = '74069' on host 'ajaynp-stg-lnx' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: ajaynp-stg-lnx [11.105.39.54] 
+******************************************************************************** 
+Connecting: ajaynp-test2-lnx 
+Connected: ajaynp-test2-lnx 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/opt/daigosim 
+Executing command: ls /opt/daigosim 
+stdout = 'bin
+etc
+lib
+networks
+pkg
+README
+setenv
+Site-11.txt
+Site-1.txt
+Site-1.xml
+Site-21.xml
+syed
+tccemulator-11.62-X17C-31.17.tgz
+tccemulator-11.112-020-G2815.tgz
+tccemulator-11.114-022-K2917.tgz
+tccemulator-11.13-023A-18.15.tgz' 
+As expected, found directory '/opt/daigosim' on host 'ajaynp-test2-lnx' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: ajaynp-test2-lnx [11.106.209.107] 
+******************************************************************************** 
+Connecting: 11.64.104.35 
+Connected: 11.64.104.35 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/opt/daigosim 
+Executing command: ls /opt/daigosim 
+stdout = 'bin
+etc
+lib
+networks
+pkg
+README
+setenv
+tccemulator-11.70-X17I-18.16.tgz
+tccemulator-11.90-X18A-17.06.tgz
+tccemulator-11.90-X18D-19.15.tgz
+tccemulator-12.31-022G-04.11.tgz
+tccemulator-12.31-022G-19.12.tgz' 
+As expected, found directory '/opt/daigosim' on host '11.64.104.35' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: 11.64.104.35 [ajaynptest10-ucs] 
+******************************************************************************** 
+Connecting: ajaynptest4-lnx 
+Connected: ajaynptest4-lnx 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.11.1.21 
+Executing command: ping -c 2 11.11.1.21 
+stdout = 'PING 11.11.1.21 (11.11.1.21) 56(84) bytes of data.
+64 bytes from 11.11.1.21: icmp_seq=1 ttl=63 time=734 ms
+64 bytes from 11.11.1.21: icmp_seq=2 ttl=63 time=0.630 ms
+
+--- 11.11.1.21 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.630/367.126/733.623/366.496 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.11.1.21' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.11.1.27 
+Executing command: ping -c 2 11.11.1.27 
+stdout = 'PING 11.11.1.27 (11.11.1.27) 56(84) bytes of data.
+64 bytes from 11.11.1.27: icmp_seq=1 ttl=63 time=672 ms
+64 bytes from 11.11.1.27: icmp_seq=2 ttl=63 time=0.477 ms
+
+--- 11.11.1.27 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.477/336.311/672.146/335.834 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.11.1.27' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.43 
+Executing command: ping -c 2 11.64.104.43 
+stdout = 'PING 11.64.104.43 (11.64.104.43) 56(84) bytes of data.
+64 bytes from 11.64.104.43: icmp_seq=1 ttl=59 time=1.01 ms
+64 bytes from 11.64.104.43: icmp_seq=2 ttl=59 time=0.706 ms
+
+--- 11.64.104.43 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 0.706/0.856/1.006/0.150 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.43' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.184 
+Executing command: ping -c 2 11.64.104.184 
+stdout = 'PING 11.64.104.184 (11.64.104.184) 56(84) bytes of data.
+64 bytes from 11.64.104.184: icmp_seq=1 ttl=59 time=0.511 ms
+64 bytes from 11.64.104.184: icmp_seq=2 ttl=59 time=0.540 ms
+
+--- 11.64.104.184 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1011ms
+rtt min/avg/max/mdev = 0.511/0.525/0.540/0.014 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.184' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.108.11 
+Executing command: ping -c 2 11.64.108.11 
+stdout = 'PING 11.64.108.11 (11.64.108.11) 56(84) bytes of data.
+64 bytes from 11.64.108.11: icmp_seq=1 ttl=250 time=0.806 ms
+64 bytes from 11.64.108.11: icmp_seq=2 ttl=250 time=0.791 ms
+
+--- 11.64.108.11 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1003ms
+rtt min/avg/max/mdev = 0.791/0.798/0.806/0.007 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.108.11' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.122 
+Executing command: ping -c 2 11.64.104.122 
+stdout = 'PING 11.64.104.122 (11.64.104.122) 56(84) bytes of data.
+64 bytes from 11.64.104.122: icmp_seq=1 ttl=59 time=0.584 ms
+64 bytes from 11.64.104.122: icmp_seq=2 ttl=59 time=0.516 ms
+
+--- 11.64.104.122 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1004ms
+rtt min/avg/max/mdev = 0.516/0.550/0.584/0.034 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.122' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.128 
+Executing command: ping -c 2 11.64.104.128 
+stdout = 'PING 11.64.104.128 (11.64.104.128) 56(84) bytes of data.
+64 bytes from 11.64.104.128: icmp_seq=1 ttl=59 time=0.552 ms
+64 bytes from 11.64.104.128: icmp_seq=2 ttl=59 time=0.422 ms
+
+--- 11.64.104.128 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1003ms
+rtt min/avg/max/mdev = 0.422/0.487/0.552/0.065 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.128' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.121 
+Executing command: ping -c 2 11.64.104.121 
+stdout = 'PING 11.64.104.121 (11.64.104.121) 56(84) bytes of data.
+64 bytes from 11.64.104.121: icmp_seq=1 ttl=59 time=0.524 ms
+64 bytes from 11.64.104.121: icmp_seq=2 ttl=59 time=0.436 ms
+
+--- 11.64.104.121 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1003ms
+rtt min/avg/max/mdev = 0.436/0.480/0.524/0.044 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.121' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: ajaynptest4-lnx [-] 
+******************************************************************************** 
+Connecting: 11.64.104.191 
+Connected: 11.64.104.191 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: DIR_EXISTS::/auto/vxr/pyvxr/latest/vxr.py 
+Executing command: ls /auto/vxr/pyvxr/latest/vxr.py 
+stdout = '/auto/vxr/pyvxr/latest/vxr.py' 
+As expected, found directory '/auto/vxr/pyvxr/latest/vxr.py' on host '11.64.104.191' 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.182 
+Executing command: ping -c 2 11.64.104.182 
+stdout = 'PING 11.64.104.182 (11.64.104.182) 56(84) bytes of data.
+64 bytes from 11.64.104.182: icmp_seq=1 ttl=64 time=0.361 ms
+64 bytes from 11.64.104.182: icmp_seq=2 ttl=64 time=0.311 ms
+
+--- 11.64.104.182 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.311/0.336/0.361/0.025 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.182' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Executing: CHECK_PING::11.64.104.74 
+Executing command: ping -c 2 11.64.104.74 
+stdout = 'PING 11.64.104.74 (11.64.104.74) 56(84) bytes of data.
+64 bytes from 11.64.104.74: icmp_seq=1 ttl=64 time=0.286 ms
+64 bytes from 11.64.104.74: icmp_seq=2 ttl=64 time=0.367 ms
+
+--- 11.64.104.74 ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.286/0.326/0.367/0.044 ms' 
+packetLossPercentage = 0 
+As expected, IP '11.64.104.74' is pingable. 
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
+Connection Closed: 11.64.104.191 [ajaynptest11-ucs] 
+Sending final email 
+Successfully sent final email 
+****************************************************************************************** 
+ERRORS RECEIVED:: 
+None 
+****************************************************************************************** 
